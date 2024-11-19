@@ -31,6 +31,8 @@ body {
     background-color: $light-gray;
     font-family: 'Futura PT', Arial, Helvetica, sans-serif;
     color: $dark-font-color;
+    overflow-x: hidden;
+
 }
 
 .btn {
@@ -150,6 +152,7 @@ body {
 
 .header {
     margin-bottom: 40px;
+    position: relative;
 
     &__content {
         min-height: 50px;
@@ -173,12 +176,38 @@ body {
 
     }
 
+    .nav--mobile {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        top: 0;
+        right: 5px;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 4px 8px 40px 0px #08186F33;
+        z-index: 10;
+        animation: showMenu 0.4s linear;
+    }
 
     &__grafity {
         min-height: 150px;
         background-image: url('../img/header_bg.webp');
         background-size: cover;
         background-position: center;
+        transition: background-image $linear03;
+    }
+}
+
+@keyframes showMenu {
+    0% {
+        right: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        right: 5px;
+        opacity: 1;
     }
 }
 
@@ -190,6 +219,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 11;
+    cursor: pointer;
+
 
     &--active {
         position: relative;
@@ -285,10 +317,13 @@ body {
 }
 
 .articles {
+
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-bottom: 40px;
+
+    transition: heigth $linear03;
 
     .article {
         display: none;
@@ -607,6 +642,11 @@ body {
 
     &__logo {
         margin-bottom: 34px;
+        cursor: pointer;
+
+        &:focus {
+            outline: $blue;
+        }
     }
 
     &__nav {
@@ -645,6 +685,11 @@ body {
 
         .nav {
             display: flex;
+            flex-direction: row;
+            position: static;
+            box-shadow: none;
+            padding: 0;
+            background-color: unset;
         }
 
         &__burger {
