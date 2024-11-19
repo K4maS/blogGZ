@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackObfuscator = require('webpack-obfuscator');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js', 
@@ -57,7 +58,7 @@ module.exports = {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource',  
         generator: {
-          filename: 'images/[name].[hash][ext]',  
+          filename: 'img/[name].[hash][ext]',  
         },
       },
       {
@@ -83,6 +84,11 @@ module.exports = {
       stringArray: true,
       stringArrayThreshold: 0.75,
     }, ['excluded_file.js']),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/img', to: 'img' },
+      ],
+    }),
   ],
 
   devServer: {
