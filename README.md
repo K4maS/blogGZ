@@ -2,8 +2,8 @@
 # Blog
 
 ## Описание
-Верстка главной страницы сайта блога
-ТЗ: https://docs.google.com/document/d/19yPn2TdWxeqETBHUvkPVzWcYfjqOoQzSVXTpo2GqLBQ/edit?tab=t.0
+Верстка главной страницы сайта блога.
+`ТЗ: https://docs.google.com/document/d/19yPn2TdWxeqETBHUvkPVzWcYfjqOoQzSVXTpo2GqLBQ/edit?tab=t.0
  
 ## Функционал
 - **Адаптивность**: поддержка устройств с шириной экрана от 320px до 2048px.
