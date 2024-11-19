@@ -3,6 +3,7 @@
 
 ## Описание
 Верстка главной страницы сайта блога
+ТЗ: https://docs.google.com/document/d/19yPn2TdWxeqETBHUvkPVzWcYfjqOoQzSVXTpo2GqLBQ/edit?tab=t.0
  
 ## Функционал
 - **Адаптивность**: поддержка устройств с шириной экрана от 320px до 2048px.
@@ -10,20 +11,20 @@
 - **Сборка**: проект собран с помощью Webpack.
 
 ## Плюсы
--Высокая ресурсная и поисковая оптимизация
+-Высокая ресурсная и поисковая оптимизация (От 96 для desctop)
 -Mobile first
 -Построен по БЭМ
--Поддерживает доп возможности для сайта
+-Поддерживает экранного диктора
 -Pixel perfect
 
 
 ## Демо
-Доступен демо-проект на GitHub Pages: [GitHub Pages](https://k4mas.github.io/ /)
+Доступен демо-проект на GitHub Pages: [GitHub Pages](https://k4mas.github.io/blogGZ/)
 
 ## Запуск проекта
 1. Клонировать репозиторий:
    ```bash
-   git clone https://github.com/K4maS/ .git
+   git clone https://github.com/K4maS/blogGZ.git
    ```
 2. Установить зависимости:
     ```bash
