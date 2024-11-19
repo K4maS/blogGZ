@@ -43,19 +43,20 @@
                         <use xlink:href="#logo"></use>
                     </svg>
                 </a>
-                
-                <nav class="nav header__nav" id="mob-menu">
-                    <a href="#1" class="nav__link link link--active">Главная</a>
-                    <a href="#2" class="nav__link link">О нас</a>
-                    <a href="#3" class="nav__link link">Контакты</a>
-                    <a href="#4" class="nav__link link">Поиск</a>
-                    <a href="tel:79999999" class="nav__link link phone">+7 (987) 887-87</a>
-                </nav>
-                <button aria-label="Мобильное меню" class="burger header__burger" id="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                 <button aria-label="Мобильное меню"  aria-expanded="false" 
+                aria-controls="mob-menu"  class="burger header__burger" id="burger">
+                    <span aria-hidden=""></span>
+                    <span aria-hidden=""></span>
+                    <span aria-hidden=""></span>
                 </button>
+                <nav class="nav header__nav" id="mob-menu">
+                    <a href="#contacts" class="nav__link link link--active">Главная</a>
+                    <a href="#about-us" class="nav__link link">О нас</a>
+                    <a href="#contacts" class="nav__link link">Контакты</a>
+                    <a href="#search" class="nav__link link">Поиск</a>
+                    <a aria-label="Позвонить по номеру  7-987-887-87" href="tel:798788787" class="nav__link link phone">+7 (987) 887-87</a>
+                </nav>
+               
             </div>
         </div>
         <div aria-disabled="true" role="presentation" class="header__grafity">
@@ -343,22 +344,23 @@
                                 5 дек 2020 
                             </p>
                         </a>
+                    </div>
                 </div>
-            </div>
                
-                <form action="" class="aside__form form">
+                <form  action="PUSH" class="aside__form form">
                     <h2 class="form__title title">
                         Подписка на рассылку
                     </h2>
-                    <input placeholder="Email@gmail.com" type="email" class="form__input input">
-                    <button type=" submit" class="form__btn btn">
+                    <input aria-balel="Введите свою электронную почту чтобы подписаться на рассылку"  
+                    placeholder="Email@gmail.com" type="email" class="form__input input">
+                    <button aria-balel="Подписаться" type=" submit" class="form__btn btn">
                         <span>
                             Подписаться
                         </span>  
                         <svg role="presentation" aria-hidden="true" class="btn__logo"  width="20" height="19" >
-                        <use xlink:href="#big-btn-arrow"></use>
-                    </svg>
-                </button>
+                            <use xlink:href="#big-btn-arrow"></use>
+                        </svg>
+                    </button>
                 </form>
                
              
