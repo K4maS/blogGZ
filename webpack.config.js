@@ -37,15 +37,7 @@ module.exports = {
   module: {
    
     rules: [
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader, 
-          'css-loader',
-          'sass-loader', 
-          
-        ],
-      },
+    
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -61,9 +53,18 @@ module.exports = {
           filename: 'img/[name].[hash][ext]',  
         },
       },
+      // {
+      //   test: /\.css$/,  
+      //   use: ['style-loader', 'css-loader'], 
+      // },
       {
-        test: /\.css$/,  
-        use: ['style-loader', 'css-loader'], 
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader, 
+          'css-loader',
+          'sass-loader', 
+          
+        ],
       },
     
     ],
